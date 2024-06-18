@@ -16,7 +16,7 @@ def server():
 
     # Escuchar conexiones ingresantes
     # TO DO
-    s.listen (s)
+    s.listen ()
 
     # Aceptar conexiones entrantes
     c, address = s.accept()
@@ -34,9 +34,9 @@ def server():
         # Obtener el input de usuario y enviar al cliente (usar response.encode())
         response = input("Enter response to send to client: ")
         # TO DO
-    c.send(response.encode())
-    # Cerrar la conexión con el cliente
-    # TO DO
+        c.send(response.encode())
+        # Cerrar la conexión con el cliente
+        # TO DO
     s.close()
 
 if __name__ == "__main__":

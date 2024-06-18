@@ -17,20 +17,20 @@ def client():
     # Pedir al usuario un input
     message = input("Ingresá un mensaje (Poner 'chau' para salir): ")
     
-    while message.lower().strip() != "bye":
+    while message.lower().strip() != "chau":
         
         # Enviar el mensaje al server (usar message.encode())
         # TO DO
         client_socket.send (message.encode())
         # Recibir una respuesta del servidor
-    data = client_socket.recv(1024).decode()
+        data = client_socket.recv(1024).decode()
 
-        # Mostrar el mensaje recibido del servidor
-    print("Received from server: " + data)
-        
-        # Pedir un nuevo mensaje
-        # TO DO
-    message = input ("Ingresa un nuevo mensaje (Poner 'chau'para salir):")
+            # Mostrar el mensaje recibido del servidor
+        print("Received from server: " + data)
+            
+            # Pedir un nuevo mensaje
+            # TO DO
+        message = input ("Ingresa un nuevo mensaje (Poner 'chau'para salir):")
     # Cerrar la conexión
     # TO DO
     client_socket.close()
